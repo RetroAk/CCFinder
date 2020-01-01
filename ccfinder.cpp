@@ -48,9 +48,16 @@ int main(int argc, char* argv[])
 	        std::ifstream ifile("/usr/bin/procdump");
 	        std::ifstream vfile("./procdump.sh");
 	        if ((bool)ifile) {
-			if ((bool)vfile) {			
+			if ((bool)vfile) {
+				try {
 			system("sh ./procdump.sh");
          		}
+			 catch (const std::exception & ex)
+                                        {
+
+                                                std::cout << entry << " " << ex.what() << std::endl;
+                                        }
+		    }		
 	        }
                 for (const auto& x : fs::recursive_directory_iterator(argv[1])) {
 					if (boost::filesystem::is_regular_file(x.path())) {
