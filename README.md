@@ -1,20 +1,26 @@
-Tested on last Ubuntu version
+Tested on last Ubuntu version and Centos (make sure you have last g++ version)
 
 
-***CLONING***
+***CLONING IN DEBIAN/UBUNTU***
 
-git clone -b Linux-version https://github.com/independentcod/CCFinder.git
+sudo apt update && sudo apt install git -y && git clone -b Linux-version https://github.com/independentcod/CCFinder.git
 
+***CLONING IN CENTOS***
 
-***COMPILING***
-
-sudo apt update && sudo apt install libboost-all-dev g++ -y
-
-g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
+sudo yum install git -y && git clone -b Linux-version https://github.com/independentcod/CCFinder.git
 
 
+***COMPILING IN DEBIAN/UBUNTU***
 
-***INSTALLING***
+sudo apt update && sudo apt install libboost-all-dev g++ -y && cd CCFinder && g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
+
+***COMPILING IN CENTOS***
+
+sudo yum upgrade -y && sudo yum install boost-devel -y && cd CCFinder && g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
+
+
+
+***INSTALLING IN ALL DISTROS***
 
 sudo cp ccfinder /usr/sbin
 
@@ -22,5 +28,6 @@ sudo cp ccfinder /usr/sbin
 
 ***RUNNING***
 
-sudo ccfinder DIRECTORY
+sudo ccfinder /
+
 
