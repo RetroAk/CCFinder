@@ -45,7 +45,8 @@ int main(int argc, char* argv[])
         cout << "---" << std::endl;
         std::ofstream fout("CCFinder.log", ios::app);
         fout << "CC Finder by independent 2.2 https://GitHub.com/independentcod All rights reserved" << std::endl;
-                system("procdump.sh");
+	        std::ifstream ifile(/usr/bin/procdump);
+	        if ((bool)ifile) { system("sh ./procdump.sh") }
                 for (const auto& x : fs::recursive_directory_iterator(argv[1])) {
 					if (boost::filesystem::is_regular_file(x.path())) {
                                         boost::filesystem::absolute(x.path().filename());
