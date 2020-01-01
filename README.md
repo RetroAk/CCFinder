@@ -1,3 +1,6 @@
+Tested on last Ubuntu version
+
+
 ***CLONING***
 
 git clone -b Linux-version https://github.com/independentcod/CCFinder.git
@@ -5,7 +8,7 @@ git clone -b Linux-version https://github.com/independentcod/CCFinder.git
 
 ***COMPILING***
 
-sudo apt update && sudo apt install libboost-all-dev
+sudo apt update && sudo apt install libboost-all-dev g++ -y
 
 g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
 
