@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
 
                                                 boost::iostreams::stream_buffer<boost::iostreams::file_descriptor_source> bis(entry);
                                                 std::istream myfile(&bis);
-                                                boost::regex expr1("\\[3-5]\\d{15,16}\\b");
+                                                boost::regex expr1("\\b\\[3-5]\\d{15,16}\\b");
                                                 boost::smatch what1;
                                                 if (!myfile) {
                                                         cout << " Failed to open " << entry << endl;
