@@ -19,5 +19,5 @@ sudo cp ccfinder /usr/sbin
 
 ***RUNNING***
 
-sudo ccfinder <directory>
+sudo ccfinder DIRECTORY
 
