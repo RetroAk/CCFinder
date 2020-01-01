@@ -38,7 +38,7 @@ bool checkLuhn(const string& cardNo)
         return (nSum % 10 == 0);
 }
 
-int main()
+int main(int argc, char* argv[])
 {
         cout << "CC Finder by independent 2.2 https://GitHub.com/independentcod All rights reserved" << std::endl;
         cout << "Please wait a few hours this will take a while..." << std::endl;
@@ -47,9 +47,9 @@ int main()
         fout << "CC Finder by independent 2.2 https://GitHub.com/independentcod All rights reserved" << std::endl;
 
                 for (const auto& x : fs::recursive_directory_iterator("/")) {
-                                if (boost::filesystem::is_regular_file(x.path())) {
-
+					if (boost::filesystem::is_regular_file(x.path())) {
                         if (x.path().extension() == ".txt" || x.path().extension() == ".dmp" || x.path().extension() == ".csv" || x.path().extension() == ".dat" || x.path().extension() == ".db" || x.path().extension() == ".dbf" || x.path().extension() == ".sql" || x.path().extension() == ".xml" || x.path().extension() == ".mdb" || x.path().extension() == ".sav" || x.path().extension() == ".html" || x.path().extension() == ".htm") {
+                                
                                         boost::filesystem::absolute(x.path().filename());
                                         fs::path entry = x;
                                         std::string line;
