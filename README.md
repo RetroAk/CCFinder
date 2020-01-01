@@ -1,4 +1,4 @@
-Tested on last Ubuntu version and Centos (make sure you have last g++ version)
+Tested on last Ubuntu version, experimental in Centos.
 
 
 ***CLONING IN DEBIAN/UBUNTU***
@@ -16,18 +16,11 @@ sudo apt update && sudo apt install libboost-all-dev g++ -y && cd CCFinder && g+
 
 ***COMPILING IN CENTOS***
 
-sudo yum upgrade -y && sudo yum install boost-devel -y && cd CCFinder && g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
-
-
-
-***INSTALLING IN ALL DISTROS***
-
-sudo cp ccfinder /usr/sbin
-
+sudo yum upgrade -y && sudo yum install boost-devel libboost-devel -y && cd CCFinder && g++ ccfinder.cpp -o ccfinder -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex
 
 
 ***RUNNING***
 
-sudo ccfinder /
+sudo ./ccfinder /
 
 
