@@ -45,10 +45,10 @@ int main(int argc, char* argv[])
         cout << "---" << std::endl;
         std::ofstream fout("CCFinder.log", ios::app);
         fout << "CC Finder by independent 2.2 https://GitHub.com/independentcod All rights reserved" << std::endl;
-	        std::ifstream ifile(/usr/bin/procdump);
-	        std::ifstream vfile(./procdump.sh);
+	        std::ifstream ifile("/usr/bin/procdump");
+	        std::ifstream vfile("./procdump.sh");
 	        if ((bool)ifile) {
-			if ((bool)vfile {			
+			if ((bool)vfile) {			
 			system("sh ./procdump.sh");
          		}
 	        }
