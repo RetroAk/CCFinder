@@ -1,4 +1,4 @@
 for i in $(ps -axo pid)
 do
-procdump -p $i
+sudo procdump -p $i
 done
