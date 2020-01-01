@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
 			 catch (const std::exception & ex)
                                         {
 
-                                                std::cout << entry << " " << ex.what() << std::endl;
+                                                std::cout << "ERROR " << ex.what() << std::endl;
                                         }
 		    }		
 	        }
