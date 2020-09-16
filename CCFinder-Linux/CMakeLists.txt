@@ -147,5 +147,6 @@ if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
         "$<$<CONFIG:Debug>:"
             "/usr/include/boost"
         ">"
-    )
-endif()
+     )
+endif()  
+
